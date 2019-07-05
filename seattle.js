@@ -16,8 +16,8 @@ const puppeteer = require('puppeteer');
   // const selector2 = "tr:nth-child(2) > td > app-custom-form-text-item > input"
 
   // ここに貼り付け
-  const selector1 = "" // 氏名
-  const selector2 = "" // ふりがな
+  const selector1 = "tr:nth-child(1) > td > app-custom-form-text-item > input" // 氏名
+  const selector2 = "tr:nth-child(2) > td > app-custom-form-text-item > input" // ふりがな
 
   // 情報が更新されるまで待機
   await page.waitForSelector('input');
