@@ -16,8 +16,8 @@ const puppeteer = require('puppeteer');
   // const selector2 = "tr:nth-child(2) > td > app-custom-form-text-item > input"
 
   // ここに貼り付け
-  const selector1 = "tr:nth-child(1) > td > app-custom-form-text-item > input" // 氏名
-  const selector2 = "tr:nth-child(2) > td > app-custom-form-text-item > input" // ふりがな
+  const selector1 = "" // 氏名
+  const selector2 = "" // ふりがな
 
   // 情報が更新されるまで待機
   await page.waitForSelector('input');
@@ -27,7 +27,7 @@ const puppeteer = require('puppeteer');
   await page.type(selector2, 'しあとるたろう');
 
   // スクショ
-  await page.screenshot({ path: 'screenshot/seattle.png'});
+  await page.screenshot({ path: 'screenshot/seattle.png', fullPage: true});
 
   // ブラウザを閉じる
   await browser.close();
